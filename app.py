@@ -14,9 +14,11 @@ import base64
 import matplotlib.pyplot as plt
 import google.generativeai as genai
 import json
+from dotenv import load_dotenv
 
+load_dotenv()
 # Set up Gemini API key
-GEMINI_API_KEY = "Your API KEY"
+GEMINI_API_KEY =os.getenv("API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 
